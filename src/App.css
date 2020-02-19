@@ -1,38 +1,414 @@
-.App {
-  text-align: center;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ------------- */
+.flex {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+body {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  padding-bottom: 0.5rem;
+}
+
+
+/* ----header---- */
+
+.header{
+  width: 100%;
+  margin: 0 auto;
+  align-items: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+.top {
+  width: 20%;
+  text-align: center;
+  /* border: 2px solid #3EA2F2 ; */
+}
+
+.main-div {
+  width: 45%;
+}
+
+.nav-div {
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+/* --logo-- */
+
+.logo {
+  width: 30px;
+  border-radius: 50px;
+  padding: 0.6rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.logo:hover {
+  background: rgb(211, 231, 248);
+}
+
+.r-13gxpu9 {
+  width: 100%;
+  fill: #3EA2F2;
+}
+
+/* --------nav-------- */
+
+.nav {
+  position: fixed;
+  padding-left: 3rem;
+}
+
+.home-logo {
+  width: 30px;
+  border-radius: 50px;
+  padding: 0.6rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.nav-elements {
+  font-weight: 500;
+  font-size: 1.4rem;
+  border-radius: 50px;
+  padding: 0.1rem 1.3rem;
+  justify-content: start;
+  transition: all 0.2s;
+  padding-left: 0;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.nav-elements:hover {
+  background: rgb(211, 231, 248);
+  color: #3EA2F2;
+}
+
+.nav-elements:hover  .r-13gxpu9{
+  fill: black;
+}
+
+.img-profile {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.nav-tweet {
+  justify-content: center;
+  font-size: 1.3rem;
+  padding: 1rem 1.3rem;
+  background: #3EA2F2;
+  color: white;
+  margin-top: 1rem;
+}
+
+.nav-tweet:hover {
+  background: rgb(6, 119, 211);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* -----------main----------- */
+.main-top {
+  justify-content: space-between;
+  /* width: 95%; */
+  margin: 0 auto;
+  border: 1px solid gainsboro;
+  padding: 0 0.5rem ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.h3-home {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* ------compose tweet--------- */
+
+.compose-tweet {
+  justify-content: center;
+  width: 100%;
+}
+
+.compose-tweet-image-div {
+  width: 50px;
+  height: 50px;
+  /* padding: 0.5rem;  */
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid white
+}
+
+/* .compose-tweet-image-div:hover {
+  border: 1px solid gainsboro;
+} */
+
+.compose-tweet-image {
+  width: 100%;
+  border-radius: 60%;
+}
+
+.write-tweet-div {
+  width: 90%;
+  /* overflow: hidden; */
+  /* height: fit-content; */
+}
+
+#write-tweet {
+  width: 90%;
+  /* overflow: hidden; */
+  border: none;
+  outline:none;
+  resize: none;
+  font-size: 1.4rem;
+  resize: none;
+  overflow: auto
+}
+
+::placeholder {
+  color: #9197A3;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+
+}
+
+.compose-top {
+  flex-direction: column;
+  border: 1px solid gainsboro;
+  border-top: none;
+  border-bottom: 12px solid #E6ECF0;
+  padding-bottom: 0.6rem;
+}
+
+/* .multer {
+  
+} */
+
+.multer-logos {
+  width: 30px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.km {
+  width: 100%;
+}
+
+.post-tweet {
+  font-size: 1.2rem;
+  padding: 0.7rem 1.3rem;
+  background: #3EA2F2;
+  border-radius: 50px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.post-tweet:hover {
+  background: rgb(6, 119, 211);
+  cursor: pointer;
+}
+
+.compose-utility {
+  width: 95%;
+}
+/* --------single-tweet---------- */
+.single-tweet {
+  border: 1px solid gainsboro;
+  padding: 0.8rem;
+  /* border-bottom: none; */
+}
+
+.content-image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.content-image-div {
+  /* width: 500px; */
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.author-details {
+  width: 100%;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.authorpic {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+.name {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.username {
+  color: rgb(83, 85, 87);
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.time {
+  color: rgb(83, 85, 87);
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.name:hover{
+  text-decoration: underline;
+}
+.username:hover {
+  text-decoration: underline;
+}
+.time:hover {
+  text-decoration: underline;
+}
+
+.single-tweet-content {
+  width: 80%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.single-tweet-pre {
+  width: 100%;
+}
+
+.pre {
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 10px;
+  word-break: break-all;
+  /* background: black; */
+}
+
+
+.pre-para {
+  /* width: 100px; */
+  display: inline-block;
+  /* background: black */
+}
+
+.content {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.features {
+  width: 22px;
+  padding-right: 5px;
+}
+
+.features-div {
+  padding-top: 1rem;
+}
+
+.f {
+  fill: rgb(121, 121, 121);
+}
+
+.comment:hover {
+  fill: #3EA2F2;
+}
+
+.share:hover {
+  fill: #3EA2F2
+}
+
+.retweet:hover {
+  fill: greenyellow
+}
+
+.like:hover {
+  fill: red;
+}
+
+.single-tweet-cover{
+  transition: all 0.2s;
+}
+
+.single-tweet-cover:hover {
+  background: #F5F8FA;
+}
+
+.features-count {
+   color: rgb(130, 132, 136);
+}
+
+.active-nav {
+  color: black;
+}
+
+
+.tweet-button {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100%;
 }
