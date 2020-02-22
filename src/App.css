@@ -412,3 +412,92 @@ body {
   cursor: pointer;
   width: 100%;
 }
+/* ------------------Aside-------------------- */
+
+aside{
+  margin-left: 1rem;
+}
+
+.aside-search-div {
+  background: #E6ECF0;
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 50px;
+  margin: 1rem 0rem;
+  width: 100%;
+}
+
+.aside-search-div input{
+  background: #E6ECF0;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  padding-left: 0.5rem;
+  color: black;
+}
+
+.aside-search-div svg {
+  width:25px;
+  fill: rgb(87, 87, 87);
+  margin-right: 0.2rem;
+}
+
+.aside-search-div ::placeholder{
+  color: rgb(87, 87, 87);
+}
+
+.trends-div{
+  background: #E6ECF0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  /* margin: 1rem 0rem; */
+  border-bottom: 1px solid rgb(179, 179, 179);
+}
+.trends-div svg{
+  width: 25px;
+}
+
+.trends-div p{
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.6rem;
+}
+
+.trends-list-div{
+  text-align: left;
+  background: #E6ECF0;
+  width: 100%;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  padding: 0.5rem;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.trends-list-div:hover{
+  background:rgb(200, 207, 214) ;
+}
+
+.trends-list-div p{
+  color: rgb(87, 87, 87);
+  padding-bottom: 0.3rem;
+  padding-left: 0.5rem;
+}
+
+.trends-list-div h5{
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.4rem 0;
+  padding-left: 0.5rem;
+}
+
+.trends-list-div h6{
+  color: rgb(87, 87, 87);
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
+}
+
